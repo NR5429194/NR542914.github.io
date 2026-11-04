@@ -1,19 +1,363 @@
+
+/* GENERAL PAGE STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
-  background-color: powderblue;
-}
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-/** CSS comments are written enclosed with these characters **/
-
-
-.myclass {
-  background-color: #fff7e8; /** hex codes also work for colors **/
+    background: #0b0d17;
+    color: #f1f3ff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
-#unique-id {
-  font-family: Arial, Helvetica, sans-serif; /** you can specify common font families OR link to a Google Font API **/
+/* BACKGROUND GLOW EFFECTS */
+
+.background-glow {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.glow-one {
+    background: #6246ea;
+    top: 100px;
+    left: -150px;
+}
+
+.glow-two {
+    background: #00c8ff;
+    right: -150px;
+    top: 500px;
+}
+
+/* NAVIGATION */
+
+header {
+    padding: 25px 8%;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #7b70ff;
+    border-radius: 12px;
+    box-shadow: 0 0 18px #6558ff66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: #a8abc4;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #a8abc4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #75dcff;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.eyebrow {
+    color: #7bdeff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.2;
+    background: linear-gradient(90deg, #ffffff, #83dfff, #9b83ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    color: #a4a8c2;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid #7770ff;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #7163ff22;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #7163ff;
+    box-shadow: 0 0 25px #7163ff88;
+    transform: translateY(-3px);
+}
+
+.main-button span {
+    margin-left: 10px;
+}
+
+/* FUTURISTIC ORBIT DESIGN */
+
+.hero-decoration {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid #7770ff66;
+    border-radius: 50%;
+    animation: rotate 14s linear infinite;
+}
+
+.orbit-one {
+    width: 130px;
+    height: 130px;
+}
+
+.orbit-two {
+    width: 200px;
+    height: 200px;
+    border-color: #00c8ff66;
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+.orbit-three {
+    width: 270px;
+    height: 270px;
+    border-style: dashed;
+    animation-duration: 30s;
+}
+
+.orbit-center {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7668ff, #00c8ff);
+    box-shadow: 0 0 45px #7163ff;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    padding: 70px 12%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.section-number {
+    color: #7bdeff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+}
+
+.section-heading h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* CARDS */
+
+.content-card {
+    background: linear-gradient(135deg, #171a2a, #111421);
+    border: 1px solid #343650;
+    border-radius: 15px;
+    transition: 0.3s;
+    color: #a8abc4;
+}
+
+.content-card:hover {
+    border-color: #7770ff;
+    box-shadow: 0 0 25px #7163ff22;
+    transform: translateY(-5px);
+}
+
+.about-card {
+    min-height: 160px;
+    padding: 30px;
+}
+
+/* INTERESTS */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.interest-card {
+    min-height: 170px;
+    padding: 25px;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    min-height: 220px;
+    border-radius: 15px;
+    border: 1px solid #343650;
+    background: linear-gradient(145deg, #1c2035, #111421);
+    color: #a8abc4;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    border-color: #00c8ff;
+    box-shadow: 0 0 25px #00c8ff33;
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px 12%;
+    color: #777c9b;
+    text-align: center;
+}
+
+.footer-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7770ff, #00c8ff, transparent);
+    margin-bottom: 25px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 750px) {
+    header {
+        padding: 20px 6%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 8%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-decoration {
+        margin-top: 25px;
+        transform: scale(0.8);
+    }
+
+    .content-section {
+        padding: 55px 8%;
+    }
+
+    .interest-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
 }
