@@ -1,26 +1,189 @@
+
 <!DOCTYPE html>
-<html>
-	<head>
-	<title>Website Title</title>
-	<link rel="stylesheet" href="styles.css">
-	</head>
+<html lang="en">
 
-	<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<h1>This is a Heading</h1>
-	<p>This is a paragraph.</p>
+    <title>My Personal Website</title>
 
-	<div> This is a section that is styled with red font. </div>
-	<div> This is a section that is styled with blue font. </div>
+    <link rel="stylesheet" href="styles.css">
 
-	<div id="unique-id"> This section has a unique id</div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	<div class="myclass"> This section has a class identifier </div>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
 
-	<a href="https://jasminelu.site"> This is an example of a link to a website </a>
+<body>
 
-	<!-- comments are enclosed by these character patterns -->
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">placeholder</a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+    </nav>
 
 
-	</body>
+    <!-- Home Section -->
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="eyebrow">Welcome To My Website</p>
+
+            <h1>
+                Hello, I'm <span>Nate Roberts</span>.
+            </h1>
+
+            <p class="hero-description">
+                placeholder
+            </p>
+
+            <a href="#about" class="main-button">
+                Get to know me →
+            </a>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="decoration-circle"></div>
+        </div>
+
+    </header>
+
+
+    <!-- About Me -->
+    <section class="section" id="about">
+
+        <div class="section-heading">
+            <p class="eyebrow">Intro</p>
+            <h2>About <span>Me</span></h2>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-text">
+                <h3>placeholder</h3>
+
+                <p>
+                    placeholder
+                </p>
+
+                <p>
+                    placeholder
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>A Few Things About Me</h3>
+
+                <p>placeholder</p>
+                <p>placeholder</p>
+                <p>placeholder</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Interests -->
+    <section class="section interests" id="interests">
+
+        <div class="section-heading">
+            <p class="eyebrow">placeholder</p>
+            <h2>My <span>Interests</span></h2>
+
+            <p class="section-subtitle">
+                placeholder
+            </p>
+        </div>
+
+        <div class="interest-grid">
+
+            <article class="interest-card">
+                <div class="card-icon">✦</div>
+                <h3>placeholder</h3>
+                <p>placeholder</p>
+            </article>
+
+            <article class="interest-card">
+                <div class="card-icon">✧</div>
+                <h3>placeholder</h3>
+                <p>placeholder</p>
+            </article>
+
+            <article class="interest-card">
+                <div class="card-icon">◇</div>
+                <h3>placeholder</h3>
+                <p>placeholder</p>
+            </article>
+
+            <article class="interest-card">
+                <div class="card-icon">☆</div>
+                <h3>placeholder</h3>
+                <p>placeholder</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gallery -->
+    <section class="section gallery" id="gallery">
+
+        <div class="section-heading">
+            <p class="eyebrow">placeholder</p>
+            <h2>Photo <span>Gallery</span></h2>
+
+            <p class="section-subtitle">
+                placeholder
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="images/photo1.jpg" alt="Personal gallery photo one">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo2.jpg" alt="Personal gallery photo two">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo3.jpg" alt="Personal gallery photo three">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p class="eyebrow">THANKS FOR VISITING</p>
+
+        <h2>placeholder</h2>
+
+        <p>placeholder</p>
+
+        <a href="#home" class="back-to-top">
+            BACK TO TOP ↑
+        </a>
+
+        <div class="footer-bottom">
+            <span>placeholder</span>
+            <span>placeholder</span>
+        </div>
+
+    </footer>
+
+</body>
 </html>
